@@ -1,3 +1,5 @@
+using popper.app.Infra;
+
 namespace popper
 {
     internal static class Program
@@ -8,6 +10,7 @@ namespace popper
         [STAThread]
         static void Main()
         {
+            ConfigureDI.ConfiguraServices();
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
