@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace popper
 {
-    public partial class Tecnico : MaterialForm
+    public partial class CadastroUsuario : MaterialForm
     {
-        public Tecnico()
+        public CadastroUsuario()
         {
             InitializeComponent();
         }

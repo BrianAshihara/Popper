@@ -22,9 +22,15 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-    <PackageReference Include="MySqlConnector" Version="2.3.0" />
+    <PackageReference Include="MySqlConnector" Version="2.3.1" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
     <PackageReference Include="ReaLTaiizor" Version="3.7.9.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\popper.domain\popper.domain.csproj" />
+    <ProjectReference Include="..\popper.repository\popper.repository.csproj" />
+    <ProjectReference Include="..\popper.service\popper.service.csproj" />
   </ItemGroup>
 
 </Project>

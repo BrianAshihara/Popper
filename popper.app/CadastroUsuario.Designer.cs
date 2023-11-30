@@ -1,6 +1,6 @@
 ﻿namespace popper
 {
-    partial class Usuario
+    partial class CadastroUsuario
     {
         /// <summary>
         /// Required designer variable.

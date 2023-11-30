@@ -35,16 +35,16 @@ namespace popper.app.Infra
             // Repositories
             Services.AddScoped<IBaseRepository<Usuario>, BaseRepository<Usuario>>();
             Services.AddScoped<IBaseRepository<Local>, BaseRepository<Local>>();
-            Services.AddScoped<IBaseRepository<Usuario>, BaseRepository<Usuario>>();
+            Services.AddScoped<IBaseRepository<Chamado>, BaseRepository<Chamado>>();
             Services.AddScoped<IBaseRepository<Tecnico>, BaseRepository<Tecnico>>();
-            Services.AddScoped<IBaseRepository<TipoChamadoModel>, BaseRepository<TipoChamadoModel>>();
+            Services.AddScoped<IBaseRepository<TipoChamado>, BaseRepository<TipoChamado>>();
 
             // Services
             Services.AddScoped<IBaseService<Usuario>, BaseService<Usuario>>();
             Services.AddScoped<IBaseService<Local>, BaseService<Local>>();
             Services.AddScoped<IBaseService<Chamado>, BaseService<Chamado>>();
             Services.AddScoped<IBaseService<Tecnico>, BaseService<Tecnico>>();
-            Services.AddScoped<IBaseService<TipoChamadoModel>, BaseService<TipoChamadoModel>>();
+            Services.AddScoped<IBaseService<TipoChamado>, BaseService<TipoChamado>>();
 
             // Formulários
             //Services.AddTransient<CadastroUsuario, CadastroUsuario>();
@@ -54,22 +54,13 @@ namespace popper.app.Infra
             {
                 config.CreateMap<Usuario, UsuarioModel>();
                 config.CreateMap<Local, LocalModel>();
-                config.CreateMap<Usuario, ClienteModel>()
-                    .ForMember(d => d.Cidade, d => d.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"))
-                    .ForMember(d => d.IdCidade, d => d.MapFrom(x => x.Cidade!.Id));
                 config.CreateMap<Tecnico, TecnicoModel>();
-                config.CreateMap<Produto, ProdutoModel>()
-                    .ForMember(d => d.Grupo, d => d.MapFrom(x => x.Grupo!.Nome))
-                    .ForMember(d => d.IdGrupo, d => d.MapFrom(x => x.Grupo!.Id));
-                config.CreateMap<Venda, VendaModel>()
-                    .ForMember(d => d.IdCliente, d => d.MapFrom(x => x.Cliente!.Id))
-                    .ForMember(d => d.Cliente, d => d.MapFrom(x => x.Cliente!.Nome))
-                    .ForMember(d => d.IdUsuario, d => d.MapFrom(x => x.Usuario!.Id))
-                    .ForMember(d => d.Usuario, d => d.MapFrom(x => x.Usuario!.Nome));
-
-                config.CreateMap<VendaItem, VendaItemModel>()
-                    .ForMember(d => d.IdProduto, d => d.MapFrom(x => x.Produto!.Id))
-                    .ForMember(d => d.Produto, d => d.MapFrom(x => x.Produto!.Nome));
+                config.CreateMap<Chamado, ChamadoModel>()
+                    .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico!.Id))
+                    .ForMember(d => d.idUsuario, d => d.MapFrom(x => x.Usuario!.Id))
+                    .ForMember(d => d.idLocal, d => d.MapFrom(x => x.Local!.Id));
+                config.CreateMap<TipoChamado, TipoChamadoModel>()
+                    .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico!.Id));
 
             }).CreateMapper());
 

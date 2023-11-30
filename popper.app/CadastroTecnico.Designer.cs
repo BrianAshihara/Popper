@@ -1,6 +1,6 @@
 ﻿namespace popper
 {
-    partial class Tecnico
+    partial class CadastroTecnico
     {
         /// <summary>
         /// Required designer variable.

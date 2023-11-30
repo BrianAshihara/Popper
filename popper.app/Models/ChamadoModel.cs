@@ -14,6 +14,9 @@ namespace popper.app.Models
         public int idUsuario { get; set; }      
         
         public int idLocal { get; set; }
+
+        public int idTipoChamado { get; set; }
+
         public string descricao { get; set; }
 
         public string status { get; set; }
