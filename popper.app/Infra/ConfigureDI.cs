@@ -60,7 +60,7 @@ namespace popper.app.Infra
                     .ForMember(d => d.idUsuario, d => d.MapFrom(x => x.Usuario!.Id))
                     .ForMember(d => d.idLocal, d => d.MapFrom(x => x.Local!.Id));
                 config.CreateMap<TipoChamado, TipoChamadoModel>()
-                    .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico!.Id));
+                    .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnicoteste!.Id));
 
             }).CreateMapper());
 
