@@ -17,6 +17,7 @@ namespace popper.domain.Entities
         public TipoChamado(int id, Tecnico? tecnico_idtecnico, string? tipo): base(id) 
         {
             Tecnico_idtecnico = tecnico_idtecnico;
+            Tipo = tipo;
         }
         public Tecnico? Tecnico_idtecnico { get; }
 

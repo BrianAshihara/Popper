@@ -50,15 +50,13 @@ namespace popper.teste
 
                 var usuario = new Usuario
                 {
-                    Nome = "Murilo",
-                    Endereco = "tonsig"
+                    Nome = "Murilo"
                 };
                 context.Usuario.Add(usuario);
 
                 usuario = new Usuario
                 {
-                    Nome = "João",
-                    Endereco = "galo"
+                    Nome = "João"
                 };
                 context.Usuario.Add(usuario);
 

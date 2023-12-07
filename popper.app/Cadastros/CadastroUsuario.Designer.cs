@@ -1,4 +1,4 @@
-﻿namespace popper
+﻿namespace popper.app.Cadastros
 {
     partial class CadastroUsuario
     {
@@ -29,10 +29,22 @@
         private void InitializeComponent()
         {
             this.txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            this.txtEndereco = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            this.txtCpf = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
+            this.btnNovo = new ReaLTaiizor.Controls.MaterialButton();
             this.btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSalvar);
+            this.panel1.Controls.Add(this.btnNovo);
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.txtCpf);
+            this.panel1.Controls.Add(this.txtNome);
             // 
             // txtNome
             // 
@@ -42,11 +54,11 @@
             this.txtNome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtNome.Depth = 0;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNome.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNome.HideSelection = true;
             this.txtNome.Hint = "Nome";
             this.txtNome.LeadingIcon = null;
-            this.txtNome.Location = new System.Drawing.Point(102, 102);
+            this.txtNome.Location = new System.Drawing.Point(127, 33);
             this.txtNome.MaxLength = 32767;
             this.txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtNome.Name = "txtNome";
@@ -58,43 +70,43 @@
             this.txtNome.SelectionLength = 0;
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
-            this.txtNome.Size = new System.Drawing.Size(664, 48);
-            this.txtNome.TabIndex = 1;
+            this.txtNome.Size = new System.Drawing.Size(514, 48);
+            this.txtNome.TabIndex = 0;
             this.txtNome.TabStop = false;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNome.TrailingIcon = null;
             this.txtNome.UseSystemPasswordChar = false;
             // 
-            // txtEndereco
+            // txtCpf
             // 
-            this.txtEndereco.AnimateReadOnly = false;
-            this.txtEndereco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtEndereco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtEndereco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtEndereco.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtEndereco.Depth = 0;
-            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtEndereco.HideSelection = true;
-            this.txtEndereco.Hint = "Endereco";
-            this.txtEndereco.LeadingIcon = null;
-            this.txtEndereco.Location = new System.Drawing.Point(102, 175);
-            this.txtEndereco.MaxLength = 32767;
-            this.txtEndereco.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.PasswordChar = '\0';
-            this.txtEndereco.PrefixSuffixText = null;
-            this.txtEndereco.ReadOnly = false;
-            this.txtEndereco.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtEndereco.SelectedText = "";
-            this.txtEndereco.SelectionLength = 0;
-            this.txtEndereco.SelectionStart = 0;
-            this.txtEndereco.ShortcutsEnabled = true;
-            this.txtEndereco.Size = new System.Drawing.Size(664, 48);
-            this.txtEndereco.TabIndex = 2;
-            this.txtEndereco.TabStop = false;
-            this.txtEndereco.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtEndereco.TrailingIcon = null;
-            this.txtEndereco.UseSystemPasswordChar = false;
+            this.txtCpf.AnimateReadOnly = false;
+            this.txtCpf.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtCpf.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtCpf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtCpf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtCpf.Depth = 0;
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCpf.HideSelection = true;
+            this.txtCpf.Hint = "CPF";
+            this.txtCpf.LeadingIcon = null;
+            this.txtCpf.Location = new System.Drawing.Point(127, 115);
+            this.txtCpf.MaxLength = 32767;
+            this.txtCpf.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.PasswordChar = '\0';
+            this.txtCpf.PrefixSuffixText = null;
+            this.txtCpf.ReadOnly = false;
+            this.txtCpf.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtCpf.SelectedText = "";
+            this.txtCpf.SelectionLength = 0;
+            this.txtCpf.SelectionStart = 0;
+            this.txtCpf.ShortcutsEnabled = true;
+            this.txtCpf.Size = new System.Drawing.Size(514, 48);
+            this.txtCpf.TabIndex = 1;
+            this.txtCpf.TabStop = false;
+            this.txtCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCpf.TrailingIcon = null;
+            this.txtCpf.UseSystemPasswordChar = false;
             // 
             // btnCancelar
             // 
@@ -104,17 +116,37 @@
             this.btnCancelar.HighEmphasis = true;
             this.btnCancelar.Icon = null;
             this.btnCancelar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnCancelar.Location = new System.Drawing.Point(556, 333);
+            this.btnCancelar.Location = new System.Drawing.Point(408, 257);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCancelar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCancelar.Size = new System.Drawing.Size(96, 36);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(84, 36);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Deletar";
             this.btnCancelar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnCancelar.UseAccentColor = false;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNovo.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnNovo.Depth = 0;
+            this.btnNovo.HighEmphasis = true;
+            this.btnNovo.Icon = null;
+            this.btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.btnNovo.Location = new System.Drawing.Point(500, 257);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnNovo.Size = new System.Drawing.Size(64, 36);
+            this.btnNovo.TabIndex = 3;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnNovo.UseAccentColor = false;
+            this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
             // 
@@ -124,7 +156,7 @@
             this.btnSalvar.HighEmphasis = true;
             this.btnSalvar.Icon = null;
             this.btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnSalvar.Location = new System.Drawing.Point(690, 333);
+            this.btnSalvar.Location = new System.Drawing.Point(572, 257);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnSalvar.Name = "btnSalvar";
@@ -141,22 +173,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtNome);
             this.Name = "CadastroUsuario";
-            this.Text = "Clientes";
+            this.Text = "Cadastro Usuario";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNome;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtEndereco;
-        private ReaLTaiizor.Controls.MaterialButton btnCancelar;
         private ReaLTaiizor.Controls.MaterialButton btnSalvar;
+        private ReaLTaiizor.Controls.MaterialButton btnNovo;
+        private ReaLTaiizor.Controls.MaterialButton btnCancelar;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtCpf;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNome;
     }
 }

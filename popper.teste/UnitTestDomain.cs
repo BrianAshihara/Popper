@@ -41,12 +41,10 @@ namespace popper.teste
 
             usuario.Nome = "rick";
 
-            usuario.Endereco = "qqq";
 
        
             Console.WriteLine(JsonSerializer.Serialize(usuario));
             Assert.AreEqual(usuario.Nome, "rick");
-            Assert.AreEqual(usuario.Endereco, "qqq");
 
 
         }

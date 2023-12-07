@@ -15,6 +15,7 @@ namespace popper.domain.Entities
         {
             Nome = nome;
             Endereco = endereco;
+            TipoChamado = tipo;
         }
 
         public string? Nome { get; set; }

@@ -1,4 +1,4 @@
-﻿using ReaLTaiizor.Forms;
+﻿using popper.app.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace popper
+namespace popper.app.Cadastros
 {
-    public partial class CadastroTecnico : MaterialForm
+    public partial class CadastroTecnico : CadastroBase
     {
         public CadastroTecnico()
         {
