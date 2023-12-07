@@ -8,5 +8,7 @@ namespace popper.app.Models
         public string nome { get; set; }
 
         public string endereco { get; set;}
+
+        public string tipo { get; set; }
     }
 }

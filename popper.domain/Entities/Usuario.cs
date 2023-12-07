@@ -9,13 +9,10 @@ namespace popper.domain.Entities
 
         }
 
-        public Usuario(int id, string? nome, string? endereco):base(id)
+        public Usuario(int id, string? nome):base(id)
         {
-            Nome = nome;
-            Endereco = endereco; 
-        }
+            Nome = nome;        }
 
         public string? Nome { get; set; }
-        public string? Endereco { get; set; }
     }
 }

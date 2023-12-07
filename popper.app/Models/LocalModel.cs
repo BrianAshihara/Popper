@@ -6,5 +6,7 @@ namespace popper.app.Models
         public int id { get; set; }
 
         public string localdesc { get; set; }
+
+        public string nome { get; set; }
     }
 }

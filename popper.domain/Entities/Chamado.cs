@@ -11,7 +11,7 @@ namespace popper.domain.Entities
     {
         public Chamado() { }
 
-        public Chamado(int id, string? desc, string? status, DateTime? hora, Usuario? usuario_idusuario, Tecnico? tecnico_idtecnico, TipoChamado? tipochamado_idtipochamado, Local? local_idlocal ):base(id)
+        public Chamado(int id, string? desc, string? status, DateTime? hora, Usuario? usuario_idusuario, Tecnico? tecnico_idtecnico, TipoChamado? tipochamado_idtipochamado, Local? local_idlocal, Usuario? nome, string tipo ):base(id)
         {
             Desc = desc;
             Status = status;
@@ -32,5 +32,9 @@ namespace popper.domain.Entities
         public TipoChamado? TipoChamado_idtipochamado { get;}
 
         public Local? Local_idlocal { get;}
+
+        public Usuario? Nome { get; set;}
+
+        public TipoChamado? Tipo { get; set;}
     }
 }

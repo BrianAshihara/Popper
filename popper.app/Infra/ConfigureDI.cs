@@ -7,6 +7,7 @@ using popper.repository.Repository;
 using popper.service.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using popper.app.Cadastros;
 
 namespace popper.app.Infra
 {
@@ -47,7 +48,11 @@ namespace popper.app.Infra
             Services.AddScoped<IBaseService<TipoChamado>, BaseService<TipoChamado>>();
 
             // Formulários
-            //Services.AddTransient<CadastroUsuario, CadastroUsuario>();
+            Services.AddTransient<CadastroUsuario, CadastroUsuario>();
+            Services.AddTransient<CadastroLocal, CadastroLocal>();
+            Services.AddTransient<CadastroTecnico, CadastroTecnico>();
+            Services.AddTransient<CadastroChamado, CadastroChamado>();
+
 
             // Mapping
             Services.AddSingleton(new MapperConfiguration(config =>
@@ -56,11 +61,12 @@ namespace popper.app.Infra
                 config.CreateMap<Local, LocalModel>();
                 config.CreateMap<Tecnico, TecnicoModel>();
                 config.CreateMap<Chamado, ChamadoModel>()
-                    .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico!.Id))
-                    .ForMember(d => d.idUsuario, d => d.MapFrom(x => x.Usuario!.Id))
-                    .ForMember(d => d.idLocal, d => d.MapFrom(x => x.Local!.Id));
+                    .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico_idtecnico!.Id))
+                    .ForMember(d => d.idUsuario, d => d.MapFrom(x => x.Usuario_idusuario!.Id))
+                    .ForMember(d => d.idLocal, d => d.MapFrom(x => x.Local_idlocal!.Id))
+                    .ForMember(d => d.idTipoChamado, d => d.MapFrom(x => x.TipoChamado_idtipochamado!.Id));
                 config.CreateMap<TipoChamado, TipoChamadoModel>()
-                    .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico!.Id));
+                    .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico_idtecnico!.Id));
 
             }).CreateMapper());
 

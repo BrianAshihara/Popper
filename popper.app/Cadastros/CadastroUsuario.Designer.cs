@@ -30,6 +30,8 @@
         {
             this.txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtEndereco = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            this.btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
+            this.btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // txtNome
@@ -94,16 +96,59 @@
             this.txtEndereco.TrailingIcon = null;
             this.txtEndereco.UseSystemPasswordChar = false;
             // 
-            // Usuario
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.HighEmphasis = true;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.btnCancelar.Location = new System.Drawing.Point(556, 333);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnCancelar.Size = new System.Drawing.Size(96, 36);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCancelar.UseAccentColor = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.HighEmphasis = true;
+            this.btnSalvar.Icon = null;
+            this.btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.btnSalvar.Location = new System.Drawing.Point(690, 333);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSalvar.Size = new System.Drawing.Size(76, 36);
+            this.btnSalvar.TabIndex = 4;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSalvar.UseAccentColor = false;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtNome);
-            this.Name = "Usuario";
+            this.Name = "CadastroUsuario";
             this.Text = "Clientes";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -111,5 +156,7 @@
 
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNome;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtEndereco;
+        private ReaLTaiizor.Controls.MaterialButton btnCancelar;
+        private ReaLTaiizor.Controls.MaterialButton btnSalvar;
     }
 }

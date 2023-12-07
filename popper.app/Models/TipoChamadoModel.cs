@@ -12,6 +12,9 @@ namespace popper.app.Models
 
         public int idTecnico { get; set; }
 
+        public string descricao { get; set; }
+
+        public string tipo { get; set; }
 
     }
 }

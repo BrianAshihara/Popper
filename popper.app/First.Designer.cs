@@ -33,6 +33,8 @@
             this.chamadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.técnicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,10 +74,25 @@
             // 
             // clienteToolStripMenuItem
             // 
+            this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroToolStripMenuItem,
+            this.localToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            // 
+            // cadastroToolStripMenuItem
+            // 
+            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastroToolStripMenuItem.Text = "Cadastro";
+            // 
+            // localToolStripMenuItem
+            // 
+            this.localToolStripMenuItem.Name = "localToolStripMenuItem";
+            this.localToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.localToolStripMenuItem.Text = "Local";
             // 
             // First
             // 
@@ -100,5 +117,7 @@
         private ToolStripMenuItem chamadoToolStripMenuItem1;
         private ToolStripMenuItem técnicosToolStripMenuItem;
         private ToolStripMenuItem clienteToolStripMenuItem;
+        private ToolStripMenuItem cadastroToolStripMenuItem;
+        private ToolStripMenuItem localToolStripMenuItem;
     }
 }

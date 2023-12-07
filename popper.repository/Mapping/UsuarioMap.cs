@@ -15,10 +15,6 @@ namespace popper.repository.Mapping
             builder.Property(prop => prop.Nome)
                 .IsRequired()
                 .HasColumnType("varchar(45)");
-
-            builder.Property(prop => prop.Endereco)
-                .IsRequired()
-                .HasColumnType("varchar(45)");
         }
     }
 }

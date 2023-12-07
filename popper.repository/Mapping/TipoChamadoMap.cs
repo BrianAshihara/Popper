@@ -19,6 +19,10 @@ namespace popper.repository.Mapping
 
             builder.Property(prop => prop.Tecnico_idtecnico);
 
+            builder.Property(prop => prop.Tipo)
+             .IsRequired()
+             .HasColumnType("varchar(20)");
+
         }
     }
 }

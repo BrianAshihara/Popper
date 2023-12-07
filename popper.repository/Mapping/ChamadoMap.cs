@@ -21,6 +21,14 @@ namespace popper.repository.Mapping
                 .IsRequired()
                 .HasColumnType("varchar(20)");
 
+            builder.Property(prop => prop.Tipo)
+                .IsRequired()
+                .HasColumnType("varchar(20)");
+
+            builder.Property(prop => prop.Nome)
+                .IsRequired()
+                .HasColumnType("varchar(45)");
+
             builder.Property(prop => prop.Hora)
                 .HasDefaultValue(DateTime.Now);
 
