@@ -26,8 +26,10 @@ namespace popper.app.Cadastros
 
         private void PreencheObjeto(Chamado chamado)
         {
-            chamado.Nome = cboNome.Text;
-            chamado.Tecnico = cboTecnico.Text;
+            var nome = (Usuario) cboNome.SelectedItem; 
+            var tecnico = (Tecnico) cboTecnico.SelectedItem;
+            chamado.Nome = nome;
+            chamado.Tecnico = tecnico;
             chamado.Desc = txtDesc.Text;
         }
     }

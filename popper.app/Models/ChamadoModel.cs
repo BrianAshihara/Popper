@@ -25,6 +25,8 @@ namespace popper.app.Models
 
         public string tipo { get; set; }
 
+        public string tec { get; set; }
+
        
     }
 }
