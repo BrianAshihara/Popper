@@ -1,4 +1,6 @@
 ﻿using popper.app.Base;
+using popper.domain.Base;
+using popper.domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +15,20 @@ namespace popper.app.Cadastros
 {
     public partial class CadastroChamado : CadastroBase
     {
-        public CadastroChamado()
+        private readonly IBaseService<Chamado> _chamadoService;
+
+        private List<Chamado>? chamado;
+        public CadastroChamado(IBaseService<Chamado> chamadoService)
         {
+            _chamadoService = chamadoService;
             InitializeComponent();
+        }
+
+        private void PreencheObjeto(Chamado chamado)
+        {
+            chamado.Nome = cboNome.Text;
+            chamado.Tecnico = cboTecnico.Text;
+            chamado.Desc = txtDesc.Text;
         }
     }
 }
