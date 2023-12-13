@@ -14,10 +14,10 @@ namespace popper.domain.Entities
         public Chamado(int id, string? desc, Usuario? usuario_idusuario, Tecnico? tecnico_idtecnico, TipoChamado? tipochamado_idtipochamado, Local? local_idlocal, Usuario? nome, string? tipo, Tecnico? tecnico ):base(id)
         {
             Desc = desc;
-            Usuario_idusuario = usuario_idusuario;
-            Tecnico_idtecnico = tecnico_idtecnico;
-            TipoChamado_idtipochamado = tipochamado_idtipochamado;
-            Local_idlocal = local_idlocal;
+         //   Usuario_idusuario = usuario_idusuario;
+         //   Tecnico_idtecnico = tecnico_idtecnico;
+         //   TipoChamado_idtipochamado = tipochamado_idtipochamado;
+         //   Local_idlocal = local_idlocal;
             Tipo = tipo;
         }
         public string? Desc { get; set; }

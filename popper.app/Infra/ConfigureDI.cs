@@ -64,10 +64,10 @@ namespace popper.app.Infra
                     .ForMember(d => d.nome, d => d.MapFrom(x => x.IdUsuario!.Nome)); 
                 config.CreateMap<Tecnico, TecnicoModel>();
                 config.CreateMap<Chamado, ChamadoModel>()
-                    .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico_idtecnico!.Id))
-                    .ForMember(d => d.idUsuario, d => d.MapFrom(x => x.Usuario_idusuario!.Id))
-                    .ForMember(d => d.idLocal, d => d.MapFrom(x => x.Local_idlocal!.Id))
-                    .ForMember(d => d.idTipoChamado, d => d.MapFrom(x => x.TipoChamado_idtipochamado!.Id))
+                    //.ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico_idtecnico!.Id))
+                    //.ForMember(d => d.idUsuario, d => d.MapFrom(x => x.Usuario_idusuario!.Id))
+                   // .ForMember(d => d.idLocal, d => d.MapFrom(x => x.Local_idlocal!.Id))
+                   // .ForMember(d => d.idTipoChamado, d => d.MapFrom(x => x.TipoChamado_idtipochamado!.Id))
                     .ForMember(d => d.nome, d => d.MapFrom(x => x.Usuario_idusuario!.Nome))
                     .ForMember(d => d.tecnico, d => d.MapFrom(x => x.Tecnico_idtecnico!.Nome)); 
                 config.CreateMap<TipoChamado, TipoChamadoModel>()

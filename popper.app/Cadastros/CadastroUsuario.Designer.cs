@@ -80,6 +80,7 @@
             txtNome.TextAlign = HorizontalAlignment.Left;
             txtNome.TrailingIcon = null;
             txtNome.UseSystemPasswordChar = false;
+            txtNome.UseWaitCursor = true;
             // 
             // txtCpf
             // 

@@ -1,4 +1,5 @@
 ﻿using popper.app.Base;
+using popper.app.Models;
 using popper.domain.Base;
 using popper.domain.Entities;
 using popper.Service.Validators;
@@ -84,9 +85,12 @@ namespace popper.app.Cadastros
 
         protected override void CarregaGrid()
         {
+            //locais = _localService.Get<LocalModel>(new[]{ "Usuario" }).ToList();
             locais = _localService.Get<Local>().ToList();
+
             dataGridView1.DataSource = locais;
             dataGridView1.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["idUsuario"]!.Visible = false;
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)

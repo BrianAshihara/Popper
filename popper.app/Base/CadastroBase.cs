@@ -88,6 +88,7 @@ namespace popper.app.Base
                 if (control is MaterialTextBoxEdit)
                 {
                     ((MaterialTextBoxEdit)control).Clear();
+
                 }
 
                 if (control is MaterialMaskedTextBox)
