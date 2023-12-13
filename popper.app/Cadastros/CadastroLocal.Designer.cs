@@ -36,6 +36,14 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
+            // tabControl1
+            // 
+            tabControl1.Size = new Size(794, 383);
+            // 
+            // tabPage1
+            // 
+            tabPage1.Size = new Size(786, 355);
+            // 
             // panel1
             // 
             panel1.Controls.Add(txtId);
@@ -132,10 +140,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Location = new Point(0, 0);
             Name = "CadastroLocal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Local";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
