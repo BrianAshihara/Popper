@@ -86,7 +86,7 @@ namespace popper.app.Cadastros
 
         protected override void CarregaGrid()
         {
-            //chamados = _chamadoService.Get<Chamado>().ToList();
+            
             chamados = _chamadoService.Get<ChamadoModel>().ToList();
 
             dataGridView1.DataSource = chamados;

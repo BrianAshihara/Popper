@@ -67,7 +67,7 @@ namespace popper.app.Cadastros
         protected override void CarregaGrid()
         {
             usuarios = _usuarioService.Get<Usuario>().ToList();
-            // usuarios = _usuarioService.Get<UsuarioModel>().ToList();
+
             dataGridView1.DataSource = usuarios;
             dataGridView1.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }

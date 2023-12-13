@@ -96,7 +96,7 @@ namespace popper.app.Cadastros
         {
             txtId.Text = linha?.Cells["Id"].Value.ToString();
             cboNome.Text = linha?.Cells["Nome"].Value.ToString();
-            txtDesc.Text = linha?.Cells["Descricao"].Value.ToString();
+            txtDesc.Text = linha?.Cells["localDesc"].Value.ToString();
         }
     }
 }

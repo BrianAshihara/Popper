@@ -83,7 +83,7 @@ namespace popper.app.Base
         protected void LimpaCampos()
         {
             IsAlteracao = false;
-            foreach (var control in tabPage1.Controls)
+            foreach (var control in panel1.Controls)
             {
                 if (control is MaterialTextBoxEdit)
                 {

@@ -84,7 +84,7 @@ namespace popper.app.Cadastros
             txtId.Text = linha?.Cells["Id"].Value.ToString();
             txtNome.Text = linha?.Cells["Nome"].Value.ToString();
             txtEndereco.Text = linha?.Cells["Endereco"].Value.ToString();
-            cboTipo.Text = linha?.Cells["Tipo de especializacao"].Value.ToString();
+            cboTipo.Text = linha?.Cells["TipoEspecialidade"].Value.ToString();
         }
     }
 }
