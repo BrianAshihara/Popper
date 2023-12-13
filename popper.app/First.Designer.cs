@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(First));
             menuStrip1 = new MenuStrip();
             chamadoToolStripMenuItem = new ToolStripMenuItem();
             chamadoToolStripMenuItem1 = new ToolStripMenuItem();
@@ -35,12 +36,13 @@
             clienteToolStripMenuItem = new ToolStripMenuItem();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             localToolStripMenuItem = new ToolStripMenuItem();
+            sairToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { chamadoToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { chamadoToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(3, 64);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(794, 24);
@@ -89,12 +91,23 @@
             localToolStripMenuItem.Text = "Local";
             localToolStripMenuItem.Click += localToolStripMenuItem_Click;
             // 
+            // sairToolStripMenuItem
+            // 
+            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            sairToolStripMenuItem.Size = new Size(38, 20);
+            sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            // 
             // First
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaptionText;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(800, 450);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "First";
@@ -116,5 +129,6 @@
         private ToolStripMenuItem clienteToolStripMenuItem;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem localToolStripMenuItem;
+        private ToolStripMenuItem sairToolStripMenuItem;
     }
 }

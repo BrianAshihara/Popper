@@ -39,6 +39,12 @@ namespace popper
         {
             Exibeformulario<CadastroLocal>();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void Exibeformulario<TFormlario>() where TFormlario : Form
         {
             var cad = ConfigureDI.ServicesProvider!.GetService<TFormlario>();
