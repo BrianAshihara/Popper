@@ -86,7 +86,7 @@ namespace popper.app.Cadastros
         protected override void CarregaGrid()
         {
             //locais = _localService.Get<LocalModel>(new[]{ "Usuario" }).ToList();
-            locais = _localService.Get<Local>().ToList();
+            locais = _localService.Get<Local>(new[] { "usuario" }).ToList();
 
             dataGridView1.DataSource = locais;
             dataGridView1.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
