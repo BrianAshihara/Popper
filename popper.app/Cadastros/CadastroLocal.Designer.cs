@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            materialComboBox1 = new ReaLTaiizor.Controls.MaterialComboBox();
+            cboNome = new ReaLTaiizor.Controls.MaterialComboBox();
             txtDesc = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -38,29 +38,30 @@
             // panel1
             // 
             panel1.Controls.Add(txtDesc);
-            panel1.Controls.Add(materialComboBox1);
+            panel1.Controls.Add(cboNome);
             // 
-            // materialComboBox1
+            // cboNome
             // 
-            materialComboBox1.AutoResize = false;
-            materialComboBox1.BackColor = Color.FromArgb(255, 255, 255);
-            materialComboBox1.Depth = 0;
-            materialComboBox1.DrawMode = DrawMode.OwnerDrawVariable;
-            materialComboBox1.DropDownHeight = 174;
-            materialComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            materialComboBox1.DropDownWidth = 121;
-            materialComboBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialComboBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialComboBox1.FormattingEnabled = true;
-            materialComboBox1.IntegralHeight = false;
-            materialComboBox1.ItemHeight = 43;
-            materialComboBox1.Location = new Point(48, 43);
-            materialComboBox1.MaxDropDownItems = 4;
-            materialComboBox1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            materialComboBox1.Name = "materialComboBox1";
-            materialComboBox1.Size = new Size(623, 49);
-            materialComboBox1.StartIndex = 0;
-            materialComboBox1.TabIndex = 0;
+            cboNome.AutoResize = false;
+            cboNome.BackColor = Color.FromArgb(255, 255, 255);
+            cboNome.Depth = 0;
+            cboNome.DrawMode = DrawMode.OwnerDrawVariable;
+            cboNome.DropDownHeight = 174;
+            cboNome.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboNome.DropDownWidth = 121;
+            cboNome.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboNome.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboNome.FormattingEnabled = true;
+            cboNome.Hint = "Nome do usuario";
+            cboNome.IntegralHeight = false;
+            cboNome.ItemHeight = 43;
+            cboNome.Location = new Point(48, 43);
+            cboNome.MaxDropDownItems = 4;
+            cboNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboNome.Name = "cboNome";
+            cboNome.Size = new Size(623, 49);
+            cboNome.StartIndex = 0;
+            cboNome.TabIndex = 0;
             // 
             // txtDesc
             // 
@@ -108,7 +109,7 @@
 
         #endregion
 
-        private ReaLTaiizor.Controls.MaterialComboBox materialComboBox1;
+        private ReaLTaiizor.Controls.MaterialComboBox cboNome;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtDesc;
     }
 }
