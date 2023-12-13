@@ -15,12 +15,12 @@ namespace popper.domain.Entities
         {
             Nome = nome;
             Endereco = endereco;
-            TipoChamado = tipo;
+            TipoEspecialidade = tipo;
         }
         public string? Nome { get; set; }
         public string? Endereco { get; set; }
 
-        public string? TipoChamado { get; set; }
+        public string? TipoEspecialidade { get; set; }
 
     }
 }

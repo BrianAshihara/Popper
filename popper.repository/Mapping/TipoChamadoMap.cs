@@ -17,7 +17,7 @@ namespace popper.repository.Mapping
 
             builder.HasKey(prop => prop.Id);
 
-            builder.HasOne(prop => prop.Tecnico_idtecnico);
+            builder.HasOne(prop => prop.Tecnico);
 
             builder.Property(prop => prop.Tipo)
              .IsRequired()

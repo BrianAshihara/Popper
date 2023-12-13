@@ -14,12 +14,12 @@ namespace popper.domain.Entities
 
         }
 
-        public TipoChamado(int id, Tecnico? tecnico_idtecnico, string? tipo): base(id) 
+        public TipoChamado(int id, Tecnico? idtecnico, string? tipo): base(id) 
         {
-            Tecnico_idtecnico = tecnico_idtecnico;
+            Tecnico = idtecnico;
             Tipo = tipo;
         }
-        public virtual Tecnico? Tecnico_idtecnico { get; set; }
+        public virtual Tecnico? Tecnico { get; set; }
 
         public string Tipo { get; set; }
     }

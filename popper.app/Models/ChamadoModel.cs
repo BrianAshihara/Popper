@@ -17,7 +17,7 @@ namespace popper.app.Models
 
         public int idTipoChamado { get; set; }
 
-        public string descricao { get; set; }
+        public string desc { get; set; }
         public string nome { get; set; }
 
         public string tipo { get; set; }

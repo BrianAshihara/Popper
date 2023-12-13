@@ -29,7 +29,7 @@ namespace popper.app.Cadastros
         {
             tecnico.Nome = txtNome.Text;
             tecnico.Endereco = txtEndereco.Text;
-            tecnico.TipoChamado = cboTipo.Text;
+            tecnico.TipoEspecialidade = cboTipo.Text;
         }
 
         protected override void Salvar()

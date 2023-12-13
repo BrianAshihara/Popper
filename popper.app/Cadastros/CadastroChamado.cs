@@ -13,7 +13,7 @@ namespace popper.app.Cadastros
         private readonly IBaseService<Tecnico> _tecnicoService;
         private readonly IBaseService<Usuario> _usuarioService;
 
-        private List<Chamado>? chamados;
+        private List<ChamadoModel>? chamados;
         public CadastroChamado(IBaseService<Chamado> chamadoService, IBaseService<Tecnico> tecnicoService, IBaseService<Usuario> usuarioService)
         {
             _chamadoService = chamadoService;
@@ -38,7 +38,7 @@ namespace popper.app.Cadastros
         {
             var nome = (Usuario)cboNome.SelectedItem;
             var tecnico = (Tecnico)cboTecnico.SelectedItem;
-            chamado.Nome = nome;
+            chamado.Usuario = nome;
             chamado.Tecnico = tecnico;
             chamado.Desc = txtDesc.Text;
             chamado.Tipo = cboTipo.Text;
@@ -86,15 +86,15 @@ namespace popper.app.Cadastros
 
         protected override void CarregaGrid()
         {
-            chamados = _chamadoService.Get<Chamado>().ToList();
-            //chamados = _chamadoService.Get<ChamadoModel>().ToList();
+            //chamados = _chamadoService.Get<Chamado>().ToList();
+            chamados = _chamadoService.Get<ChamadoModel>().ToList();
 
             dataGridView1.DataSource = chamados;
             dataGridView1.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.Columns["Usuario_idusuario"]!.Visible = false;
-            dataGridView1.Columns["Tecnico_idtecnico"]!.Visible = false;
-            dataGridView1.Columns["Local_idlocal"]!.Visible = false;
-            dataGridView1.Columns["TipoChamado_idtipochamado"]!.Visible = false;
+            dataGridView1.Columns["idUsuario"]!.Visible = false;
+            dataGridView1.Columns["idTecnico"]!.Visible = false;
+            dataGridView1.Columns["idLocal"]!.Visible = false;
+            dataGridView1.Columns["idTipoChamado"]!.Visible = false;
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)

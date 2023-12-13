@@ -23,15 +23,11 @@ namespace popper.repository.Mapping
                 .HasColumnType("varchar(20)");
 
 
-            builder.HasOne(prop => prop.Tecnico_idtecnico);
+            builder.HasOne(prop => prop.Usuario);
 
-            builder.HasOne(prop => prop.Usuario_idusuario);
+            builder.HasOne(prop => prop.Local);
 
-            builder.HasOne(prop => prop.Local_idlocal);
-
-            builder.HasOne(prop => prop.TipoChamado_idtipochamado);
-
-            builder.HasOne(prop => prop.Nome);
+            builder.HasOne(prop => prop.TipoChamado);
 
             builder.HasOne(prop => prop.Tecnico);
         }
