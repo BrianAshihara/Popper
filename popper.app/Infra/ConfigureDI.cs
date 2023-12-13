@@ -59,7 +59,8 @@ namespace popper.app.Infra
             Services.AddSingleton(new MapperConfiguration(config =>
             {
                 config.CreateMap<Usuario, UsuarioModel>();
-                config.CreateMap<Local, LocalModel>();
+                config.CreateMap<Local, LocalModel>()
+                    .ForMember(d => d.nome, d => d.MapFrom(x => x.IdUsuario!.Nome)); 
                 config.CreateMap<Tecnico, TecnicoModel>();
                 config.CreateMap<Chamado, ChamadoModel>()
                     .ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico_idtecnico!.Id))

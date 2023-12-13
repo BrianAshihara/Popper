@@ -33,6 +33,7 @@ namespace popper.app.Cadastros
             chamado.Nome = nome;
             chamado.Tecnico = tecnico;
             chamado.Desc = txtDesc.Text;
+            chamado.Tipo = cboTipo.Text; 
         }
 
         protected override void Salvar()
@@ -88,6 +89,7 @@ namespace popper.app.Cadastros
             cboNome.Text = linha?.Cells["Nome"].Value.ToString();
             cboTecnico.Text = linha?.Cells["Estado"].Value.ToString();
             txtDesc.Text = linha?.Cells["Descricao"].Value.ToString();
+            cboTipo.Text = linha?.Cells["Tipo do problema"].Value.ToString(); 
         }
     }
 }

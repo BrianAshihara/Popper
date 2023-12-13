@@ -11,7 +11,7 @@ namespace popper.domain.Entities
     {
         public Tecnico() { }
 
-        public Tecnico(int id, string? nome, string? endereco, TipoChamado? tipo): base(id)  
+        public Tecnico(int id, string? nome, string? endereco, string? tipo): base(id)  
         {
             Nome = nome;
             Endereco = endereco;
@@ -21,7 +21,7 @@ namespace popper.domain.Entities
         public string? Nome { get; set; }
         public string? Endereco { get; set; }
 
-        public TipoChamado? TipoChamado { get; set; }
+        public string? TipoChamado { get; set; }
 
     }
 }

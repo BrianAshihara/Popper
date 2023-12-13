@@ -7,6 +7,7 @@ namespace popper.app.Models
 
         public string localdesc { get; set; }
 
+        public string idUsuario { get; set; }
         public string nome { get; set; }
     }
 }

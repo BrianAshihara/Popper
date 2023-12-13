@@ -11,13 +11,16 @@ namespace popper.domain.Entities
     {
         public Local() { }
 
-        public Local(int id, string? localdesc, Usuario? nome):base(id)
+        public Local(int id, string? localdesc, Usuario? nome, Usuario? idUsuario):base(id)
         {
             Localdesc = localdesc;
             Nome = nome;
+            IdUsuario = idUsuario; 
         }
 
         public string? Localdesc { get; set; }
+        
+        public Usuario? IdUsuario { get; set; }
 
         public Usuario? Nome { get;set; }
 
