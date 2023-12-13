@@ -30,6 +30,7 @@
         {
             cboNome = new ReaLTaiizor.Controls.MaterialComboBox();
             txtDesc = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel1.SuspendLayout();
@@ -37,6 +38,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(txtId);
             panel1.Controls.Add(txtDesc);
             panel1.Controls.Add(cboNome);
             // 
@@ -94,6 +96,37 @@
             txtDesc.TrailingIcon = null;
             txtDesc.UseSystemPasswordChar = false;
             // 
+            // txtId
+            // 
+            txtId.AnimateReadOnly = false;
+            txtId.AutoCompleteMode = AutoCompleteMode.None;
+            txtId.AutoCompleteSource = AutoCompleteSource.None;
+            txtId.BackgroundImageLayout = ImageLayout.None;
+            txtId.CharacterCasing = CharacterCasing.Normal;
+            txtId.Depth = 0;
+            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtId.HideSelection = true;
+            txtId.Hint = "ID";
+            txtId.LeadingIcon = null;
+            txtId.Location = new Point(48, 213);
+            txtId.MaxLength = 32767;
+            txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txtId.Name = "txtId";
+            txtId.PasswordChar = '\0';
+            txtId.PrefixSuffixText = null;
+            txtId.ReadOnly = true;
+            txtId.RightToLeft = RightToLeft.No;
+            txtId.SelectedText = "";
+            txtId.SelectionLength = 0;
+            txtId.SelectionStart = 0;
+            txtId.ShortcutsEnabled = true;
+            txtId.Size = new Size(623, 48);
+            txtId.TabIndex = 3;
+            txtId.TabStop = false;
+            txtId.TextAlign = HorizontalAlignment.Left;
+            txtId.TrailingIcon = null;
+            txtId.UseSystemPasswordChar = false;
+            // 
             // CadastroLocal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -111,5 +144,6 @@
 
         private ReaLTaiizor.Controls.MaterialComboBox cboNome;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtDesc;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
     }
 }

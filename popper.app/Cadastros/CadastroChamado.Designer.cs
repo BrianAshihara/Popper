@@ -32,6 +32,7 @@
             cboTipo = new ReaLTaiizor.Controls.MaterialComboBox();
             txtDesc = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             cboNome = new ReaLTaiizor.Controls.MaterialComboBox();
+            txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel1.SuspendLayout();
@@ -39,6 +40,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(txtId);
             panel1.Controls.Add(txtDesc);
             panel1.Controls.Add(cboTipo);
             panel1.Controls.Add(cboTecnico);
@@ -59,7 +61,7 @@
             cboTecnico.Hint = "Quem realizará o atendimento";
             cboTecnico.IntegralHeight = false;
             cboTecnico.ItemHeight = 43;
-            cboTecnico.Location = new Point(56, 116);
+            cboTecnico.Location = new Point(56, 102);
             cboTecnico.MaxDropDownItems = 4;
             cboTecnico.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboTecnico.Name = "cboTecnico";
@@ -82,7 +84,7 @@
             cboTipo.Hint = "Qual o tipo de problema";
             cboTipo.IntegralHeight = false;
             cboTipo.ItemHeight = 43;
-            cboTipo.Location = new Point(399, 33);
+            cboTipo.Location = new Point(399, 23);
             cboTipo.MaxDropDownItems = 4;
             cboTipo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboTipo.Name = "cboTipo";
@@ -102,7 +104,7 @@
             txtDesc.HideSelection = true;
             txtDesc.Hint = "Descricao do problema";
             txtDesc.LeadingIcon = null;
-            txtDesc.Location = new Point(56, 193);
+            txtDesc.Location = new Point(56, 176);
             txtDesc.MaxLength = 32767;
             txtDesc.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtDesc.Name = "txtDesc";
@@ -136,13 +138,44 @@
             cboNome.Hint = "Quem realizou o chamado";
             cboNome.IntegralHeight = false;
             cboNome.ItemHeight = 43;
-            cboNome.Location = new Point(56, 33);
+            cboNome.Location = new Point(56, 23);
             cboNome.MaxDropDownItems = 4;
             cboNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboNome.Name = "cboNome";
             cboNome.Size = new Size(282, 49);
             cboNome.StartIndex = 0;
             cboNome.TabIndex = 11;
+            // 
+            // txtId
+            // 
+            txtId.AnimateReadOnly = false;
+            txtId.AutoCompleteMode = AutoCompleteMode.None;
+            txtId.AutoCompleteSource = AutoCompleteSource.None;
+            txtId.BackgroundImageLayout = ImageLayout.None;
+            txtId.CharacterCasing = CharacterCasing.Normal;
+            txtId.Depth = 0;
+            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtId.HideSelection = true;
+            txtId.Hint = "ID";
+            txtId.LeadingIcon = null;
+            txtId.Location = new Point(56, 240);
+            txtId.MaxLength = 32767;
+            txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txtId.Name = "txtId";
+            txtId.PasswordChar = '\0';
+            txtId.PrefixSuffixText = null;
+            txtId.ReadOnly = true;
+            txtId.RightToLeft = RightToLeft.No;
+            txtId.SelectedText = "";
+            txtId.SelectionLength = 0;
+            txtId.SelectionStart = 0;
+            txtId.ShortcutsEnabled = true;
+            txtId.Size = new Size(623, 48);
+            txtId.TabIndex = 15;
+            txtId.TabStop = false;
+            txtId.TextAlign = HorizontalAlignment.Left;
+            txtId.TrailingIcon = null;
+            txtId.UseSystemPasswordChar = false;
             // 
             // CadastroChamado
             // 
@@ -162,5 +195,6 @@
         private ReaLTaiizor.Controls.MaterialComboBox cboTipo;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtDesc;
         private ReaLTaiizor.Controls.MaterialComboBox cboNome;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
     }
 }

@@ -1,0 +1,1 @@
+﻿Server=localhost;Port=3306;Database=popper;Uid=root;Pwd=7350

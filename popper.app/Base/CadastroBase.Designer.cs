@@ -30,14 +30,14 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            panel1 = new Panel();
-            tabPage2 = new TabPage();
-            dataGridView1 = new DataGridView();
             btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
             btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
+            panel1 = new Panel();
+            tabPage2 = new TabPage();
+            btnNovo = new ReaLTaiizor.Controls.MaterialButton();
             btnExcluir = new ReaLTaiizor.Controls.MaterialButton();
             btnEditar = new ReaLTaiizor.Controls.MaterialButton();
-            btnNovo = new ReaLTaiizor.Controls.MaterialButton();
+            dataGridView1 = new DataGridView();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -68,37 +68,6 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Cadastro";
             tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(7, 6);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(773, 284);
-            panel1.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(btnNovo);
-            tabPage2.Controls.Add(btnExcluir);
-            tabPage2.Controls.Add(btnEditar);
-            tabPage2.Controls.Add(dataGridView1);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(786, 365);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Consulta";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Top;
-            dataGridView1.Location = new Point(3, 3);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(780, 295);
-            dataGridView1.TabIndex = 0;
             // 
             // btnSalvar
             // 
@@ -142,6 +111,48 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // panel1
+            // 
+            panel1.Location = new Point(7, 6);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(773, 284);
+            panel1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(btnNovo);
+            tabPage2.Controls.Add(btnExcluir);
+            tabPage2.Controls.Add(btnEditar);
+            tabPage2.Controls.Add(dataGridView1);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(786, 365);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Consulta";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnNovo
+            // 
+            btnNovo.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnNovo.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnNovo.Depth = 0;
+            btnNovo.HighEmphasis = true;
+            btnNovo.Icon = null;
+            btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnNovo.Location = new Point(533, 307);
+            btnNovo.Margin = new Padding(4, 6, 4, 6);
+            btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnNovo.Name = "btnNovo";
+            btnNovo.NoAccentTextColor = Color.Empty;
+            btnNovo.Size = new Size(64, 36);
+            btnNovo.TabIndex = 15;
+            btnNovo.Text = "Novo";
+            btnNovo.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnNovo.UseAccentColor = false;
+            btnNovo.UseVisualStyleBackColor = true;
+            btnNovo.Click += btnNovo_Click;
+            // 
             // btnExcluir
             // 
             btnExcluir.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -184,26 +195,16 @@
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
             // 
-            // btnNovo
+            // dataGridView1
             // 
-            btnNovo.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnNovo.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnNovo.Depth = 0;
-            btnNovo.HighEmphasis = true;
-            btnNovo.Icon = null;
-            btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnNovo.Location = new Point(533, 307);
-            btnNovo.Margin = new Padding(4, 6, 4, 6);
-            btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            btnNovo.Name = "btnNovo";
-            btnNovo.NoAccentTextColor = Color.Empty;
-            btnNovo.Size = new Size(64, 36);
-            btnNovo.TabIndex = 15;
-            btnNovo.Text = "Novo";
-            btnNovo.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnNovo.UseAccentColor = false;
-            btnNovo.UseVisualStyleBackColor = true;
-            btnNovo.Click += btnNovo_Click;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Top;
+            dataGridView1.Location = new Point(3, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(780, 295);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.TabStop = false;
             // 
             // CadastroBase
             // 
@@ -225,7 +226,6 @@
 
         #endregion
         private TabPage tabPage2;
-        private DataGridView dataGridView1;
         public TabControl tabControl1;
         public TabPage tabPage1;
         protected Panel panel1;
@@ -234,5 +234,6 @@
         private ReaLTaiizor.Controls.MaterialButton btnNovo;
         private ReaLTaiizor.Controls.MaterialButton btnExcluir;
         private ReaLTaiizor.Controls.MaterialButton btnEditar;
+        protected DataGridView dataGridView1;
     }
 }

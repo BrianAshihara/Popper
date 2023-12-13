@@ -30,6 +30,7 @@
         {
             txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             txtCpf = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel1.SuspendLayout();
@@ -37,6 +38,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(txtId);
             panel1.Controls.Add(txtCpf);
             panel1.Controls.Add(txtNome);
             // 
@@ -52,7 +54,7 @@
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
-            txtNome.Location = new Point(127, 33);
+            txtNome.Location = new Point(127, 20);
             txtNome.MaxLength = 32767;
             txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtNome.Name = "txtNome";
@@ -83,7 +85,7 @@
             txtCpf.HideSelection = true;
             txtCpf.Hint = "CPF";
             txtCpf.LeadingIcon = null;
-            txtCpf.Location = new Point(127, 115);
+            txtCpf.Location = new Point(127, 93);
             txtCpf.MaxLength = 32767;
             txtCpf.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtCpf.Name = "txtCpf";
@@ -102,6 +104,37 @@
             txtCpf.TrailingIcon = null;
             txtCpf.UseSystemPasswordChar = false;
             // 
+            // txtId
+            // 
+            txtId.AnimateReadOnly = false;
+            txtId.AutoCompleteMode = AutoCompleteMode.None;
+            txtId.AutoCompleteSource = AutoCompleteSource.None;
+            txtId.BackgroundImageLayout = ImageLayout.None;
+            txtId.CharacterCasing = CharacterCasing.Normal;
+            txtId.Depth = 0;
+            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtId.HideSelection = true;
+            txtId.Hint = "ID";
+            txtId.LeadingIcon = null;
+            txtId.Location = new Point(127, 166);
+            txtId.MaxLength = 32767;
+            txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txtId.Name = "txtId";
+            txtId.PasswordChar = '\0';
+            txtId.PrefixSuffixText = null;
+            txtId.ReadOnly = true;
+            txtId.RightToLeft = RightToLeft.No;
+            txtId.SelectedText = "";
+            txtId.SelectionLength = 0;
+            txtId.SelectionStart = 0;
+            txtId.ShortcutsEnabled = true;
+            txtId.Size = new Size(514, 48);
+            txtId.TabIndex = 2;
+            txtId.TabStop = false;
+            txtId.TextAlign = HorizontalAlignment.Left;
+            txtId.TrailingIcon = null;
+            txtId.UseSystemPasswordChar = false;
+            // 
             // CadastroUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -118,5 +151,6 @@
         #endregion
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtCpf;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNome;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
     }
 }
