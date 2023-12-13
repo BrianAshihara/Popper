@@ -22,10 +22,6 @@ namespace popper.repository.Mapping
                 .IsRequired()
                 .HasColumnType("varchar(20)");
 
-           /* builder.Property(prop => prop.Nome)
-                .IsRequired()
-                .HasColumnType("varchar(45)");*/
-
 
             builder.HasOne(prop => prop.Tecnico_idtecnico);
 
