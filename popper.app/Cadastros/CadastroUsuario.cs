@@ -1,16 +1,9 @@
 ﻿using popper.app.Base;
+using popper.app.Models;
 using popper.domain.Base;
 using popper.domain.Entities;
 using popper.Service.Validators;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace popper.app.Cadastros
 {
@@ -74,6 +67,7 @@ namespace popper.app.Cadastros
         protected override void CarregaGrid()
         {
             usuarios = _usuarioService.Get<Usuario>().ToList();
+           // usuarios = _usuarioService.Get<UsuarioModel>(new[] { "Usuario" }).ToList();
             dataGridView1.DataSource = usuarios;
             dataGridView1.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }

@@ -17,14 +17,24 @@ namespace popper.app.Cadastros
     public partial class CadastroLocal : CadastroBase
     {
         private readonly IBaseService<Local> _localService;
+        private readonly IBaseService<Usuario> _usuarioService;
 
         private List<Local>? locais;
-        public CadastroLocal(IBaseService<Local> localService)
+        public CadastroLocal(IBaseService<Local> localService,IBaseService<Usuario> usuarioService)
         {
             _localService = localService;
+            _usuarioService = usuarioService;
             InitializeComponent();
+            CarregarCombo();
+            
         }
+        private void CarregarCombo()
+        {
+            cboNome.ValueMember = "Id";
+            cboNome.DisplayMember = "Nome";
+            cboNome.DataSource = _usuarioService.Get<Usuario>().ToList();
 
+        }
         private void PreencheObjeto(Local local)
         {
             var nome = (Usuario)cboNome.SelectedItem;

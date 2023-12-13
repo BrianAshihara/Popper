@@ -92,6 +92,7 @@
             cboTipo.Hint = "Qual o tipo de problema";
             cboTipo.IntegralHeight = false;
             cboTipo.ItemHeight = 43;
+            cboTipo.Items.AddRange(new object[] { "", "Mecanico", "Eletrico", "Assistencia" });
             cboTipo.Location = new Point(399, 23);
             cboTipo.MaxDropDownItems = 4;
             cboTipo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;

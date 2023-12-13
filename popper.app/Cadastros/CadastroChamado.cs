@@ -18,12 +18,28 @@ namespace popper.app.Cadastros
     public partial class CadastroChamado : CadastroBase
     {
         private readonly IBaseService<Chamado> _chamadoService;
+        private readonly IBaseService<Tecnico> _tecnicoService;
+        private readonly IBaseService<Usuario> _usuarioService;
 
         private List<Chamado>? chamados;
-        public CadastroChamado(IBaseService<Chamado> chamadoService)
+        public CadastroChamado(IBaseService<Chamado> chamadoService, IBaseService<Tecnico> tecnicoService, IBaseService<Usuario> usuarioService)
         {
             _chamadoService = chamadoService;
+            _tecnicoService = tecnicoService;
+            _usuarioService = usuarioService;
             InitializeComponent();
+            CarregarCombo();
+        }
+
+        private void CarregarCombo()
+        {
+            cboNome.ValueMember = "Id";
+            cboNome.DisplayMember = "Nome";
+            cboNome.DataSource = _usuarioService.Get<Usuario>().ToList();
+
+            cboTecnico.ValueMember = "Id";
+            cboTecnico.DisplayMember = "Nome";
+            cboTecnico.DataSource = _tecnicoService.Get<Tecnico>().ToList();
         }
 
         private void PreencheObjeto(Chamado chamado)
@@ -86,8 +102,8 @@ namespace popper.app.Cadastros
         protected override void CarregaRegistro(DataGridViewRow? linha)
         {
             txtId.Text = linha?.Cells["Id"].Value.ToString();
-            cboNome.Text = linha?.Cells["Nome"].Value.ToString();
-            cboTecnico.Text = linha?.Cells["Estado"].Value.ToString();
+            cboNome.Text = linha?.Cells["Nome do cliente"].Value.ToString();
+            cboTecnico.Text = linha?.Cells["Tecnico"].Value.ToString();
             txtDesc.Text = linha?.Cells["Descricao"].Value.ToString();
             cboTipo.Text = linha?.Cells["Tipo do problema"].Value.ToString();
         }
