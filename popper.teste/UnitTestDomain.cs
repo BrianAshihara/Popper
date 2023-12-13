@@ -54,13 +54,11 @@ namespace popper.teste
             var chamado = new Chamado();
 
             chamado.Desc = "aaa";
-            chamado.Hora = DateTime.Now;
             chamado.Status = "bbb";
 
 
             Console.WriteLine(JsonSerializer.Serialize(chamado));
             Assert.AreEqual(chamado.Desc, "aaa");
-            Assert.AreEqual(chamado.Hora, DateTime.Now);
             Assert.AreEqual(chamado.Status, "bbb");
 
         }

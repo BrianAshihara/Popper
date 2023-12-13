@@ -7,9 +7,6 @@ namespace popper.Service.Validators
     {
         public ChamadoValidator()
         {
-            RuleFor(c => c.Hora)
-                .NotEmpty().WithMessage("Por favor informe a hora do incidente.")
-                .NotNull().WithMessage("Por favor informe a hora do incidente.");
             RuleFor(c => c.Status)
                 .NotEmpty().WithMessage("Por favor informe o status do problema.")
                 .NotNull().WithMessage("Por favor informe do problema.");

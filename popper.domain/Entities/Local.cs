@@ -20,9 +20,9 @@ namespace popper.domain.Entities
 
         public string? Localdesc { get; set; }
         
-        public Usuario? IdUsuario { get; set; }
+        public virtual Usuario? IdUsuario { get; set; }
 
-        public Usuario? Nome { get;set; }
+        public virtual Usuario? Nome { get;set; }
 
     }
 }

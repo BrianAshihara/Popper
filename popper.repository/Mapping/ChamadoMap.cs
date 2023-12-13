@@ -25,20 +25,22 @@ namespace popper.repository.Mapping
                 .IsRequired()
                 .HasColumnType("varchar(20)");
 
-            builder.Property(prop => prop.Nome)
+           /* builder.Property(prop => prop.Nome)
                 .IsRequired()
-                .HasColumnType("varchar(45)");
+                .HasColumnType("varchar(45)");*/
 
-            builder.Property(prop => prop.Hora)
-                .HasDefaultValue(DateTime.Now);
 
-            builder.Property(prop => prop.Tecnico_idtecnico);
+            builder.HasOne(prop => prop.Tecnico_idtecnico);
 
-            builder.Property(prop => prop.Usuario_idusuario);
+            builder.HasOne(prop => prop.Usuario_idusuario);
 
-            builder.Property(prop => prop.Local_idlocal);
+            builder.HasOne(prop => prop.Local_idlocal);
 
-            builder.Property(prop => prop.TipoChamado_idtipochamado);
+            builder.HasOne(prop => prop.TipoChamado_idtipochamado);
+
+            builder.HasOne(prop => prop.Nome);
+
+            builder.HasOne(prop => prop.Tecnico);
         }
     }
 }
