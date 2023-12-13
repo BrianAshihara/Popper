@@ -28,88 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.chamadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chamadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.técnicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.localToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            chamadoToolStripMenuItem = new ToolStripMenuItem();
+            chamadoToolStripMenuItem1 = new ToolStripMenuItem();
+            técnicosToolStripMenuItem = new ToolStripMenuItem();
+            clienteToolStripMenuItem = new ToolStripMenuItem();
+            cadastroToolStripMenuItem = new ToolStripMenuItem();
+            localToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chamadoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 64);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(794, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.Items.AddRange(new ToolStripItem[] { chamadoToolStripMenuItem });
+            menuStrip1.Location = new Point(3, 64);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(794, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // chamadoToolStripMenuItem
             // 
-            this.chamadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chamadoToolStripMenuItem1,
-            this.técnicosToolStripMenuItem,
-            this.clienteToolStripMenuItem});
-            this.chamadoToolStripMenuItem.Name = "chamadoToolStripMenuItem";
-            this.chamadoToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.chamadoToolStripMenuItem.Text = "Opções";
+            chamadoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { chamadoToolStripMenuItem1, técnicosToolStripMenuItem, clienteToolStripMenuItem });
+            chamadoToolStripMenuItem.Name = "chamadoToolStripMenuItem";
+            chamadoToolStripMenuItem.Size = new Size(59, 20);
+            chamadoToolStripMenuItem.Text = "Opções";
             // 
             // chamadoToolStripMenuItem1
             // 
-            this.chamadoToolStripMenuItem1.Name = "chamadoToolStripMenuItem1";
-            this.chamadoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.chamadoToolStripMenuItem1.Text = "Chamado";
-            this.chamadoToolStripMenuItem1.Click += new System.EventHandler(this.chamadoToolStripMenuItem1_Click);
+            chamadoToolStripMenuItem1.Name = "chamadoToolStripMenuItem1";
+            chamadoToolStripMenuItem1.Size = new Size(180, 22);
+            chamadoToolStripMenuItem1.Text = "Chamado";
+            chamadoToolStripMenuItem1.Click += chamadoToolStripMenuItem1_Click;
             // 
             // técnicosToolStripMenuItem
             // 
-            this.técnicosToolStripMenuItem.Name = "técnicosToolStripMenuItem";
-            this.técnicosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.técnicosToolStripMenuItem.Text = "Técnicos";
-            this.técnicosToolStripMenuItem.Click += new System.EventHandler(this.técnicosToolStripMenuItem_Click);
+            técnicosToolStripMenuItem.Name = "técnicosToolStripMenuItem";
+            técnicosToolStripMenuItem.Size = new Size(180, 22);
+            técnicosToolStripMenuItem.Text = "Técnicos";
+            técnicosToolStripMenuItem.Click += técnicosToolStripMenuItem_Click;
             // 
             // clienteToolStripMenuItem
             // 
-            this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem,
-            this.localToolStripMenuItem});
-            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clienteToolStripMenuItem.Text = "Cliente";
+            clienteToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, localToolStripMenuItem });
+            clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            clienteToolStripMenuItem.Size = new Size(180, 22);
+            clienteToolStripMenuItem.Text = "Cliente";
             // 
             // cadastroToolStripMenuItem
             // 
-            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.cadastroToolStripMenuItem.Text = "Cadastro";
-            this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
+            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            cadastroToolStripMenuItem.Size = new Size(121, 22);
+            cadastroToolStripMenuItem.Text = "Cadastro";
+            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
             // localToolStripMenuItem
             // 
-            this.localToolStripMenuItem.Name = "localToolStripMenuItem";
-            this.localToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.localToolStripMenuItem.Text = "Local";
-            this.localToolStripMenuItem.Click += new System.EventHandler(this.localToolStripMenuItem_Click);
+            localToolStripMenuItem.Name = "localToolStripMenuItem";
+            localToolStripMenuItem.Size = new Size(121, 22);
+            localToolStripMenuItem.Text = "Local";
+            localToolStripMenuItem.Click += localToolStripMenuItem_Click;
             // 
             // First
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "First";
-            this.Text = "Central de Chamados";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(menuStrip1);
+            IsMdiContainer = true;
+            MainMenuStrip = menuStrip1;
+            Name = "First";
+            Text = "Central de Chamados";
+            WindowState = FormWindowState.Maximized;
+            FormClosing += FormPrincipal_FormClosing;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

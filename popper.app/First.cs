@@ -13,6 +13,14 @@ namespace popper
             InitializeComponent();
         }
 
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            {
+                e.Cancel = true;
+            }
+        }
+
 
         private void chamadoToolStripMenuItem1_Click(object sender, EventArgs e)
         {

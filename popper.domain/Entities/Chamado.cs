@@ -24,9 +24,9 @@ namespace popper.domain.Entities
         public string? Desc { get; set; }
         public string? Status { get; set; }
 
-        public virtual Usuario? Usuario_idusuario { get;}
+        public virtual Usuario? Usuario_idusuario { get; set; }
         
-        public virtual Tecnico? Tecnico_idtecnico { get; }
+        public virtual Tecnico? Tecnico_idtecnico { get; set; }
 
         public virtual TipoChamado? TipoChamado_idtipochamado { get;}
 

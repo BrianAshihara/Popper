@@ -19,7 +19,7 @@ namespace popper.domain.Entities
             Tecnico_idtecnico = tecnico_idtecnico;
             Tipo = tipo;
         }
-        public virtual Tecnico? Tecnico_idtecnico { get; }
+        public virtual Tecnico? Tecnico_idtecnico { get; set; }
 
         public string Tipo { get; set; }
     }
