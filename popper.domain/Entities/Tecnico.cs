@@ -17,7 +17,6 @@ namespace popper.domain.Entities
             Endereco = endereco;
             TipoChamado = tipo;
         }
-
         public string? Nome { get; set; }
         public string? Endereco { get; set; }
 
