@@ -11,7 +11,7 @@ namespace popper.app.Cadastros
     {
         private readonly IBaseService<Usuario> _usuarioService;
 
-        private List<Usuario>? usuarios;
+        private List<UsuarioModel>? usuarios;
         public CadastroUsuario(IBaseService<Usuario> usuarioService)
         {
             _usuarioService = usuarioService;
@@ -66,8 +66,8 @@ namespace popper.app.Cadastros
 
         protected override void CarregaGrid()
         {
-            usuarios = _usuarioService.Get<Usuario>().ToList();
-           // usuarios = _usuarioService.Get<UsuarioModel>(new[] { "Usuario" }).ToList();
+           // usuarios = _usuarioService.Get<Usuario>().ToList();
+            usuarios = _usuarioService.Get<UsuarioModel>().ToList();
             dataGridView1.DataSource = usuarios;
             dataGridView1.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }

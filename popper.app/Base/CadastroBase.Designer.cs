@@ -131,6 +131,7 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Consulta";
             tabPage2.UseVisualStyleBackColor = true;
+            tabPage2.Enter += tabPage2_Enter;
             // 
             // btnNovo
             // 
