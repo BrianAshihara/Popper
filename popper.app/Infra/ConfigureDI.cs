@@ -19,7 +19,7 @@ namespace popper.app.Infra
         public static void ConfiguraServices()
         {
             Services = new ServiceCollection();
-            var strCon = File.ReadAllText("C:\\Users\\Brian\\source\\repos\\projetoPopper\\popper.app\\Config\\DatabaseSettings.txt");
+            var strCon = File.ReadAllText("../../../Config/DatabaseSettings.txt");
             Services.AddDbContext<MySqlContext>(options =>
             {
                 options.LogTo(Console.WriteLine)
@@ -61,7 +61,8 @@ namespace popper.app.Infra
             {
                 config.CreateMap<Usuario, UsuarioModel>();
                 config.CreateMap<Local, LocalModel>()
-                    .ForMember(d => d.nome, d => d.MapFrom(x => x.IdUsuario!.Nome)); 
+                    .ForMember(d => d.nome, d => d.MapFrom(x => x.Usuario!.Nome))
+                    .ForMember(d => d.idUsuario, d => d.MapFrom(x => x.Usuario!.Id));
                 config.CreateMap<Tecnico, TecnicoModel>();
                 config.CreateMap<Chamado, ChamadoModel>()
                     //.ForMember(d => d.idTecnico, d => d.MapFrom(x => x.Tecnico_idtecnico!.Id))

@@ -21,11 +21,7 @@ namespace popper.repository.Mapping
                 .IsRequired()
                 .HasColumnType("varchar(80)");
 
-            /*builder.Property(prop => prop.Nome)
-                .IsRequired()
-                .HasColumnType("varchar(45)");*/
-
-            builder.HasOne(prop => prop.Nome);
+            builder.HasOne(prop => prop.Usuario);
 
         }
     }

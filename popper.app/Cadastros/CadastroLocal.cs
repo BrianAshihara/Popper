@@ -20,7 +20,7 @@ namespace popper.app.Cadastros
         private readonly IBaseService<Local> _localService;
         private readonly IBaseService<Usuario> _usuarioService;
 
-        private List<Local>? locais;
+        private List<LocalModel>? locais;
         public CadastroLocal(IBaseService<Local> localService,IBaseService<Usuario> usuarioService)
         {
             _localService = localService;
@@ -39,7 +39,7 @@ namespace popper.app.Cadastros
         private void PreencheObjeto(Local local)
         {
             var nome = (Usuario)cboNome.SelectedItem;
-            local.Nome = nome;
+            local.Usuario = nome;
             local.Localdesc = txtDesc.Text;
         }
 
@@ -85,8 +85,7 @@ namespace popper.app.Cadastros
 
         protected override void CarregaGrid()
         {
-            //locais = _localService.Get<LocalModel>(new[]{ "Usuario" }).ToList();
-            locais = _localService.Get<Local>(new[] { "usuario" }).ToList();
+            locais = _localService.Get<LocalModel>(new[] { "Usuario" }).ToList();
 
             dataGridView1.DataSource = locais;
             dataGridView1.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
