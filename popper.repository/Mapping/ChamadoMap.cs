@@ -17,9 +17,6 @@ namespace popper.repository.Mapping
                 .IsRequired()
                 .HasColumnType("varchar(100)");
 
-            builder.Property(prop => prop.Status)
-                .IsRequired()
-                .HasColumnType("varchar(20)");
 
             builder.Property(prop => prop.Tipo)
                 .IsRequired()

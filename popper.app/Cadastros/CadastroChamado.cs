@@ -1,4 +1,5 @@
 ﻿using popper.app.Base;
+using popper.app.Models;
 using popper.domain.Base;
 using popper.domain.Entities;
 using popper.Service.Validators;
@@ -12,7 +13,7 @@ namespace popper.app.Cadastros
         private readonly IBaseService<Tecnico> _tecnicoService;
         private readonly IBaseService<Usuario> _usuarioService;
 
-        private List<Chamado>? chamados;
+        private List<ChamadoModel>? chamados;
         public CadastroChamado(IBaseService<Chamado> chamadoService, IBaseService<Tecnico> tecnicoService, IBaseService<Usuario> usuarioService)
         {
             _chamadoService = chamadoService;
@@ -85,7 +86,9 @@ namespace popper.app.Cadastros
 
         protected override void CarregaGrid()
         {
-            chamados = _chamadoService.Get<Chamado>().ToList();
+            //chamados = _chamadoService.Get<Chamado>().ToList();
+            chamados = _chamadoService.Get<ChamadoModel>().ToList();
+
             dataGridView1.DataSource = chamados;
             dataGridView1.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
