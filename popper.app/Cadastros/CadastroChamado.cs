@@ -100,10 +100,10 @@ namespace popper.app.Cadastros
         protected override void CarregaRegistro(DataGridViewRow? linha)
         {
             txtId.Text = linha?.Cells["Id"].Value.ToString();
-            cboNome.Text = linha?.Cells["Nome do cliente"].Value.ToString();
-            cboTecnico.Text = linha?.Cells["Tecnico"].Value.ToString();
-            txtDesc.Text = linha?.Cells["Descricao"].Value.ToString();
-            cboTipo.Text = linha?.Cells["Tipo do problema"].Value.ToString();
+            cboNome.Text = linha?.Cells["nome"].Value.ToString();
+            cboTecnico.Text = linha?.Cells["tecnico"].Value.ToString();
+            txtDesc.Text = linha?.Cells["desc"].Value.ToString();
+            cboTipo.Text = linha?.Cells["tipo"].Value.ToString();
         }
     }
 }
